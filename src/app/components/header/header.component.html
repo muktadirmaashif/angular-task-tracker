@@ -1,7 +1,11 @@
-<header>
-    <h1>{{ title }}</h1>
-    <app-button color="teal" text="Add" 
-        (btnClick)="toggleAddTask()">
-    </app-button> 
-    <!--sending color and text value to button.component.ts file-->
+<header *ngIf="!hasRoute('/about')">
+  <h1>{{ title }}</h1>
+  <app-button
+    
+    color="{{ showAddTask ? 'teal' : 'green' }}"
+    text="{{ showAddTask ? 'Close' : 'Add' }}"
+    (btnClick)="toggleAddTask()"
+  >
+  </app-button>
+  <!--sending color and text value to button.component.ts file-->
 </header>

@@ -16,6 +16,8 @@ export class ButtonComponent implements OnInit {
   }
 
   onClick() {
+    console.log("Add button clicked from button.component.ts");
+    
     this.btnClick.emit();
     
   }
